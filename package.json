@@ -1,0 +1,28 @@
+{
+  "name": "decentralized-voting-system",
+  "version": "1.0.0",
+  "description": "Decentralized electronic voting system (demo) built with Solidity and Hardhat.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost"
+  },
+  "keywords": [
+    "blockchain",
+    "voting",
+    "solidity",
+    "hardhat"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "hardhat": "^2.29.1"
+  },
+  "dependencies": {
+    "ethers": "^6.17.0"
+  }
+}

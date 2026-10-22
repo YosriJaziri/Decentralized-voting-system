@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vote Electronique Decentralise - Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Vote Electronique Decentralise</h1>
+    <p class="warning">
+      Demo pedagogique sur une blockchain publique: les votes et interactions peuvent etre
+      observables. Ce systeme ne garantit pas, a lui seul, le secret du vote ni la securite
+      d'une veritable election nationale.
+    </p>
+    <button id="connectBtn">Connecter le wallet</button>
+    <p id="account"></p>
+  </header>
+
+  <main>
+    <section id="adminSection">
+      <h2>Administration</h2>
+
+      <div class="card">
+        <h3>Enregistrer des electeurs</h3>
+        <input id="voterAddressInput" type="text" placeholder="Adresse de l'electeur (0x...)" />
+        <button id="registerVoterBtn">Enregistrer</button>
+        <p id="registerVoterStatus" class="status"></p>
+      </div>
+
+      <div class="card">
+        <h3>Creer une election</h3>
+        <input id="electionNameInput" type="text" placeholder="Nom de l'election" />
+        <input id="candidatesInput" type="text" placeholder="Candidats separes par des virgules (ex: Alice,Bob)" />
+        <label>Debut : <input id="startTimeInput" type="datetime-local" /></label>
+        <label>Fin : <input id="endTimeInput" type="datetime-local" /></label>
+        <button id="createElectionBtn">Creer l'election</button>
+        <p id="createElectionStatus" class="status"></p>
+      </div>
+    </section>
+
+    <section id="voteSection">
+      <h2>Voter</h2>
+      <div class="card">
+        <label>Identifiant de l'election : <input id="electionIdInput" type="number" min="0" value="0" /></label>
+        <button id="loadElectionBtn">Charger l'election</button>
+        <div id="electionInfo"></div>
+        <div id="candidateList"></div>
+        <p id="voteStatus" class="status"></p>
+      </div>
+    </section>
+
+    <section id="resultsSection">
+      <h2>Resultats</h2>
+      <div class="card">
+        <label>Identifiant de l'election : <input id="resultsElectionIdInput" type="number" min="0" value="0" /></label>
+        <button id="loadResultsBtn">Afficher les resultats</button>
+        <div id="resultsOutput"></div>
+        <p id="resultsStatus" class="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.17.0/dist/ethers.umd.min.js"></script>
+  <script src="config.js"></script>
+  <script src="abis.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

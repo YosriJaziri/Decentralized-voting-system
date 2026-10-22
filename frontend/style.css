@@ -1,0 +1,83 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.warning {
+  background: #fff4e5;
+  border: 1px solid #f0c36d;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card input,
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card input[type="text"],
+.card input[type="number"],
+.card input[type="datetime-local"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #2962ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1b4bd1;
+}
+
+.status {
+  font-size: 0.85rem;
+  color: #444;
+  min-height: 1.2em;
+}
+
+#candidateList button {
+  display: block;
+  margin: 6px 0;
+  width: 100%;
+  text-align: left;
+  background: #eef1ff;
+  color: #1a1a1a;
+}
+
+#candidateList button:hover {
+  background: #d8e0ff;
+}
+
+section h2 {
+  border-bottom: 2px solid #2962ff;
+  display: inline-block;
+}
